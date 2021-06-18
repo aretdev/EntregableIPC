@@ -5,7 +5,7 @@
 
 La temática del año fue un sistema de reservas para un club de padel.
 El proyecto se divide en :
-+ ip_entregable
++ ipc_entregable
 	+ Controllers
 		+ AreaSociosController.java
 		+ LoginController.java
