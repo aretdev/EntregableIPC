@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ipc_entregable.Controllers.RegistroController">
+   <children>
+      <HBox id="parentHbox" fx:id="parentHboxRegister" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <VBox fx:id="izqCont" alignment="TOP_CENTER" prefHeight="600.0" prefWidth="523.0">
+               <children>
+                  <HBox alignment="TOP_RIGHT" nodeOrientation="RIGHT_TO_LEFT">
+                     <children>
+                        <SVGPath id="button_back" fx:id="back_button" content="M28,14H8.8l4.62-4.62C13.814,8.986,14,8.516,14,8c0-0.984-0.813-2-2-2c-0.531,0-0.994,0.193-1.38,0.58l-7.958,7.958  C2.334,14.866,2,15.271,2,16s0.279,1.08,0.646,1.447l7.974,7.973C11.006,25.807,11.469,26,12,26c1.188,0,2-1.016,2-2  c0-0.516-0.186-0.986-0.58-1.38L8.8,18H28c1.104,0,2-0.896,2-2S29.104,14,28,14M28,14H8.8l4.62-4.62C13.814,8.986,14,8.516,14,8c0-0.984-0.813-2-2-2c-0.531,0-0.994,0.193-1.38,0.58l-7.958,7.958  C2.334,14.866,2,15.271,2,16s0.279,1.08,0.646,1.447l7.974,7.973C11.006,25.807,11.469,26,12,26c1.188,0,2-1.016,2-2  c0-0.516-0.186-0.986-0.58-1.38L8.8,18H28c1.104,0,2-0.896,2-2S29.104,14,28,14" fill="WHITE" onMouseClicked="#back_clicked" rotate="180.0" scaleX="1.6" scaleY="1.6">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </SVGPath>
+                     </children>
+                  </HBox>
+                  <ImageView fx:id="logo_obj" fitHeight="137.0" fitWidth="304.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/Logo.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="295.0" prefWidth="435.0" spacing="30.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="15.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <SVGPath content="M18.71,7.21a1,1,0,0,0-1.42,0L9.84,14.67,6.71,11.53A1,1,0,1,0,5.29,13l3.84,3.84a1,1,0,0,0,1.42,0l8.16-8.16A1,1,0,0,0,18.71,7.21ZM18.71,7.21a1,1,0,0,0-1.42,0L9.84,14.67,6.71,11.53A1,1,0,1,0,5.29,13l3.84,3.84a1,1,0,0,0,1.42,0l8.16-8.16A1,1,0,0,0,18.71,7.21Z" fill="#59ff27" scaleX="1.5" scaleY="1.5" />
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Reserva tus pistas online.">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="15.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <SVGPath content="M18.71,7.21a1,1,0,0,0-1.42,0L9.84,14.67,6.71,11.53A1,1,0,1,0,5.29,13l3.84,3.84a1,1,0,0,0,1.42,0l8.16-8.16A1,1,0,0,0,18.71,7.21ZM18.71,7.21a1,1,0,0,0-1.42,0L9.84,14.67,6.71,11.53A1,1,0,1,0,5.29,13l3.84,3.84a1,1,0,0,0,1.42,0l8.16-8.16A1,1,0,0,0,18.71,7.21Z" fill="#59ff27" scaleX="1.5" scaleY="1.5" />
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Novedades del club.">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="15.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <SVGPath content="M18.71,7.21a1,1,0,0,0-1.42,0L9.84,14.67,6.71,11.53A1,1,0,1,0,5.29,13l3.84,3.84a1,1,0,0,0,1.42,0l8.16-8.16A1,1,0,0,0,18.71,7.21ZM18.71,7.21a1,1,0,0,0-1.42,0L9.84,14.67,6.71,11.53A1,1,0,1,0,5.29,13l3.84,3.84a1,1,0,0,0,1.42,0l8.16-8.16A1,1,0,0,0,18.71,7.21Z" fill="#59ff27" scaleX="1.5" scaleY="1.5" />
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Descuentos en reservas.">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="15.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <SVGPath content="M18.71,7.21a1,1,0,0,0-1.42,0L9.84,14.67,6.71,11.53A1,1,0,1,0,5.29,13l3.84,3.84a1,1,0,0,0,1.42,0l8.16-8.16A1,1,0,0,0,18.71,7.21ZM18.71,7.21a1,1,0,0,0-1.42,0L9.84,14.67,6.71,11.53A1,1,0,1,0,5.29,13l3.84,3.84a1,1,0,0,0,1.42,0l8.16-8.16A1,1,0,0,0,18.71,7.21Z" fill="#59ff27" scaleX="1.5" scaleY="1.5" />
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Crea encuentros amistosos.">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="15.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <SVGPath content="M18.71,7.21a1,1,0,0,0-1.42,0L9.84,14.67,6.71,11.53A1,1,0,1,0,5.29,13l3.84,3.84a1,1,0,0,0,1.42,0l8.16-8.16A1,1,0,0,0,18.71,7.21ZM18.71,7.21a1,1,0,0,0-1.42,0L9.84,14.67,6.71,11.53A1,1,0,1,0,5.29,13l3.84,3.84a1,1,0,0,0,1.42,0l8.16-8.16A1,1,0,0,0,18.71,7.21Z" fill="#59ff27" scaleX="1.5" scaleY="1.5" />
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Paga directamente online">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="477.0" style="-fx-background-color: white;">
+               <children>
+                  <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de Socio">
+                           <font>
+                              <Font name="Arial" size="29.0" />
+                           </font>
+                        </Text>
+                        <HBox>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="* Campo obligatorio" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="334.0">
+                     <children>
+                        <Text fx:id="error_1" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" />
+                     </children>
+                     <padding>
+                        <Insets left="20.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <VBox>
+                     <children>
+                        <HBox nodeOrientation="LEFT_TO_RIGHT" spacing="40.0">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label nodeOrientation="LEFT_TO_RIGHT" text="Nombre*" />
+                                    <TextField fx:id="nombre_input" nodeOrientation="LEFT_TO_RIGHT" prefWidth="90.0" styleClass="basicInput">
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <Label text="Apellidos*" />
+                                    <TextField fx:id="apellidos_input" nodeOrientation="LEFT_TO_RIGHT" prefWidth="120.0" styleClass="basicInput">
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="8.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox nodeOrientation="LEFT_TO_RIGHT">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label text="Teléfono*" />
+                                    <TextField fx:id="tlf_input" nodeOrientation="LEFT_TO_RIGHT" prefWidth="100.0" styleClass="basicInput">
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT">
+                           <padding>
+                              <Insets top="25.0" />
+                           </padding>
+                           <children>
+                              <VBox prefHeight="10.0" prefWidth="10.0">
+                                 <children>
+                                    <Text fx:id="error_2_2" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" />
+                                    <Text fx:id="error_2" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox nodeOrientation="LEFT_TO_RIGHT" spacing="45.0">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label text="Login*" />
+                                    <TextField fx:id="login_input" nodeOrientation="LEFT_TO_RIGHT" prefWidth="85.0" styleClass="basicInput">
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <Label text="Contraseña*" />
+                                    <PasswordField fx:id="pass_input" nodeOrientation="LEFT_TO_RIGHT" styleClass="basicInput">
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                    </PasswordField>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" nodeOrientation="RIGHT_TO_LEFT" spacing="10.0">
+                           <children>
+                              <ImageView fx:id="test_img_view" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button fx:id="selecc_img_opt" mnemonicParsing="false" text="Seleccionar Imagen">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Label text="Imagen de Perfil :  " />
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT">
+                           <children>
+                              <Text fx:id="error_3" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" />
+                           </children>
+                           <padding>
+                              <Insets top="45.0" />
+                           </padding>
+                        </HBox>
+                        <HBox nodeOrientation="LEFT_TO_RIGHT" spacing="20.0">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label text="Num. Tarjeta Credito" />
+                                    <TextField fx:id="numTarjeta_input" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="130.0" styleClass="basicInput">
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <Label text="SVC" />
+                                    <TextField fx:id="svc_input" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="40.0" styleClass="basicInput">
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox fx:id="hboxButtons" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT">
+                           <children>
+                              <Button fx:id="ir_atras_button" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#back_clicked" prefHeight="40.0" prefWidth="130.0" styleClass="red_btn" text="Ir Atrás" textOverrun="CENTER_WORD_ELLIPSIS">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="registro_button" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goRegistro" prefHeight="40.0" prefWidth="130.0" styleClass="green_btn" stylesheets="@../style/style.css" text="Registrarse" textOverrun="CENTER_WORD_ELLIPSIS">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</StackPane>

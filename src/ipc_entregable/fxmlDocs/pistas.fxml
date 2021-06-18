@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ipc_entregable.Controllers.PistasController">
+   <children>
+      <VBox id="parentBoxLogged" fx:id="parentBoxLogged" prefHeight="600.0" prefWidth="1000.0" stylesheets="@../style/style.css">
+         <children>
+            <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="20.0" prefWidth="1000.0" spacing="30.0" style="-fx-background-color: rgba(255, 255, 255, 0.79);">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <HBox fx:id="user_data_box" alignment="CENTER_LEFT" focusTraversable="true" prefWidth="300.0" spacing="20.0">
+                     <children>
+                        <Circle fx:id="pic_login" fill="#dadada" focusTraversable="true" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                        <Label fx:id="Login_name" text="NombreUser" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="area_socios_box" alignment="CENTER" prefHeight="50.0" prefWidth="300.0">
+                     <children>
+                        <Text fx:id="header_middle_text" strokeType="OUTSIDE" strokeWidth="0.0" text="RESERVAR" textAlignment="CENTER" wrappingWidth="182.265625">
+                           <font>
+                              <Font name="Arial" size="25.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="atras_cerrar_box" alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="228.0" prefWidth="300.0" spacing="25.0">
+                     <children>
+                        <Button fx:id="atras_butt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#ir_atras" prefHeight="44.0" prefWidth="48.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <SVGPath fx:id="ir_atras_svg" content="M28,14H8.8l4.62-4.62C13.814,8.986,14,8.516,14,8c0-0.984-0.813-2-2-2c-0.531,0-0.994,0.193-1.38,0.58l-7.958,7.958  C2.334,14.866,2,15.271,2,16s0.279,1.08,0.646,1.447l7.974,7.973C11.006,25.807,11.469,26,12,26c1.188,0,2-1.016,2-2  c0-0.516-0.186-0.986-0.58-1.38L8.8,18H28c1.104,0,2-0.896,2-2S29.104,14,28,14M28,14H8.8l4.62-4.62C13.814,8.986,14,8.516,14,8c0-0.984-0.813-2-2-2c-0.531,0-0.994,0.193-1.38,0.58l-7.958,7.958  C2.334,14.866,2,15.271,2,16s0.279,1.08,0.646,1.447l7.974,7.973C11.006,25.807,11.469,26,12,26c1.188,0,2-1.016,2-2  c0-0.516-0.186-0.986-0.58-1.38L8.8,18H28c1.104,0,2-0.896,2-2S29.104,14,28,14" focusTraversable="true" onMouseClicked="#ir_atras" scaleX="1.6" scaleY="1.6" strokeMiterLimit="0.0" strokeWidth="0.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </SVGPath>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="close_butt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#cerrar_sesion" prefHeight="44.0" prefWidth="124.0" styleClass="red_btn" text="Cerrar Sesión" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox fx:id="datPickerContainer" alignment="CENTER" prefHeight="33.0" prefWidth="1000.0" spacing="20.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Selecciona una fecha:" />
+                  <DatePicker fx:id="datePickerObj" promptText="dd/mm/aaaa" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Text fx:id="textoReserva" fill="#00ff09" strokeType="OUTSIDE" strokeWidth="0.0" text="Reserva realizada con éxito!" visible="false">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="472.0" prefWidth="1000.0" spacing="100.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <GridPane prefHeight="455.0" prefWidth="656.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="6.0" prefWidth="26.0" />
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="6.0" prefWidth="26.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="47.0" minWidth="10.0" percentWidth="6.0" prefWidth="15.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" percentWidth="15.0" prefWidth="135.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="6.0" prefWidth="26.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="30.0" minHeight="10.0" percentHeight="25.0" prefHeight="20.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="30.0" minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="30.0" minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="30.0" minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: WHITE; -fx-background-radius: 5 0 0 0;" GridPane.rowIndex="1">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="De 9:00 a 10:30" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: WHITE;" GridPane.rowIndex="2">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="De 10:30 a 12:00" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: WHITE;" GridPane.rowIndex="3">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="De 12:00 a 13:30" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: WHITE;" GridPane.rowIndex="4">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="De 13:30 a 15:00" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: WHITE;" GridPane.rowIndex="5">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="De 15:00 a 16:30" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: WHITE;" GridPane.rowIndex="6">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="De 16:30 a 18:00" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: WHITE;" GridPane.rowIndex="7">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="De 18:00 a 19:30" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: WHITE; -fx-background-radius: 0 0 0 5;" GridPane.rowIndex="8">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="De 19:30 a 21:00" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 5 5 0 0;" GridPane.columnIndex="2">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pista 1">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 5 5 0 0;" GridPane.columnIndex="4">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pista 2">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 5 5 0 0;" GridPane.columnIndex="8">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pista 4">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 5 5 0 0;" GridPane.columnIndex="6">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pista 3">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <ListView fx:id="ListViewPista1" fixedCellSize="46.4" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="8" GridPane.valignment="CENTER" />
+                        <ListView fx:id="ListViewPista2" fixedCellSize="46.4" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="8" GridPane.valignment="CENTER" />
+                        <ListView fx:id="ListViewPista3" fixedCellSize="46.4" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="8" GridPane.valignment="CENTER" />
+                        <ListView fx:id="ListViewPista4" fixedCellSize="46.4" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="8" GridPane.valignment="CENTER" />
+                        <Button fx:id="reservarPista" mnemonicParsing="false" onAction="#reservarSelected" prefHeight="33.0" prefWidth="138.0" styleClass="green_btn" text="Reservar Pista " GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="9" />
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>
